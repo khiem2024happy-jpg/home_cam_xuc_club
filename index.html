@@ -1,0 +1,948 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cảm Xúc Club — Chạm Giai Điệu, Kết Yêu Thương | CLB Âm Nhạc Bờ Vịnh Hạ Long</title>
+  <meta name="description" content="Cảm Xúc Club — Chạm giai điệu, kết yêu thương. Sân khấu âm nhạc acoustic định kỳ tối Chủ Nhật hàng tuần ngắm trọn vịnh biển Hạ Long. Nơi hội tụ của những tâm hồn yêu âm nhạc, đam mê ca hát và tìm kiếm sự đồng điệu.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Cảm Xúc Club — Chạm Giai Điệu, Kết Yêu Thương">
+  <meta property="og:description" content="Âm nhạc chỉ làm tôn thêm cảm xúc. Đêm nhạc Chủ Nhật hàng tuần và Special Show tại bờ vịnh Hạ Long. Đăng ký tham gia nghe và hát ngay!">
+  <meta property="og:image" content="dem-cam-xuc-ben-bien.jpg">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #15284f;
+      --primary-dark: #0d1a35;
+      --primary-light: #223e78;
+      --secondary: #f4b2c7;
+      --secondary-light: #fdf2f6;
+      --accent: #e85584;
+      --accent-hover: #d13d6d;
+      --gold: #d4a359;
+      --bg: #fcf9fa;
+      --surface: #ffffff;
+      --text: #201b2a;
+      --muted: #645e70;
+      --border: #f0e2eb;
+      --font-body: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      --font-heading: 'Playfair Display', Georgia, serif;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--font-body);
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: inherit; text-decoration: none; }
+    img { max-width: 100%; height: auto; display: block; }
+
+    /* Header */
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px clamp(18px, 6vw, 75px);
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 20px rgba(21, 40, 79, 0.04);
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 800;
+      font-size: 19px;
+      letter-spacing: .03em;
+      color: var(--primary);
+    }
+    .brand-logo-svg {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      box-shadow: 0 4px 12px rgba(232, 85, 132, 0.25);
+      flex-shrink: 0;
+    }
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: 14.5px;
+      font-weight: 600;
+    }
+    nav a {
+      color: var(--text);
+      opacity: .85;
+      transition: all .2s ease;
+    }
+    nav a:hover {
+      opacity: 1;
+      color: var(--accent);
+    }
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .btn-header {
+      padding: 9px 20px;
+      font-size: 13.5px;
+      font-weight: 700;
+      border-radius: 999px;
+      transition: all .25s ease;
+    }
+    .btn-header.primary {
+      background: var(--accent);
+      color: #fff !important;
+    }
+    .btn-header.primary:hover {
+      background: var(--accent-hover);
+      transform: translateY(-1px);
+    }
+    .btn-header.secondary {
+      background: var(--secondary-light);
+      color: var(--primary);
+      border: 1px solid var(--border);
+    }
+    .btn-header.secondary:hover {
+      background: #fae4ed;
+    }
+
+    /* Hero Section */
+    .hero {
+      position: relative;
+      padding: clamp(70px, 9vw, 120px) clamp(20px, 8vw, 110px);
+      background: radial-gradient(circle at 85% 20%, #2f5298 0%, #15284f 75%);
+      color: #fff;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(244, 178, 199, 0.15) 0%, transparent 70%);
+      top: -150px;
+      right: -100px;
+      pointer-events: none;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 880px;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-transform: uppercase;
+      letter-spacing: .15em;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: #ffd8e5;
+      background: rgba(255,255,255,0.12);
+      padding: 6px 18px;
+      border-radius: 999px;
+      margin-bottom: 22px;
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255,255,255,0.18);
+    }
+    h1 {
+      font-family: var(--font-heading);
+      font-size: clamp(40px, 6.2vw, 72px);
+      font-weight: 700;
+      line-height: 1.15;
+      margin-bottom: 22px;
+      letter-spacing: -0.01em;
+    }
+    .hero-subtitle {
+      font-size: clamp(17px, 2.2vw, 20.5px);
+      line-height: 1.8;
+      color: #ede9f4;
+      max-width: 760px;
+      margin-bottom: 34px;
+    }
+    .hero-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 38px;
+    }
+    .hero-feat-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 255, 255, 0.12);
+      backdrop-filter: blur(8px);
+      padding: 9px 18px;
+      border-radius: 12px;
+      font-size: 14px;
+      border: 1px solid rgba(255,255,255,0.2);
+    }
+    .actions { display: flex; gap: 14px; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      border-radius: 999px;
+      padding: 15px 30px;
+      font-weight: 700;
+      font-size: 15px;
+      cursor: pointer;
+      transition: all .25s ease;
+    }
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.22);
+    }
+    .btn.primary { background: var(--accent); color: #fff; }
+    .btn.primary:hover { background: var(--accent-hover); }
+    .btn.secondary-btn { background: #fff; color: var(--primary); }
+    .btn.secondary-btn:hover { background: #fdf0f4; }
+    .btn.ghost { border: 1px solid rgba(255,255,255,.55); color: #fff; }
+    .btn.ghost:hover { background: rgba(255,255,255,0.12); border-color: #fff; }
+
+    /* Sections Common */
+    section { padding: clamp(65px, 8vw, 100px) clamp(20px, 8vw, 110px); }
+    .section-header { text-align: center; max-width: 780px; margin: 0 auto 45px; }
+    .section-kicker {
+      color: var(--accent);
+      font-size: 12.5px;
+      font-weight: 800;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+      display: inline-block;
+    }
+    h2 {
+      font-family: var(--font-heading);
+      font-size: clamp(30px, 4vw, 46px);
+      color: var(--primary);
+      margin-bottom: 16px;
+      font-weight: 700;
+      line-height: 1.25;
+    }
+    .intro {
+      font-size: 16.5px;
+      line-height: 1.8;
+      color: var(--muted);
+    }
+
+    /* MANIFESTO / TUYÊN NGÔN Ý NGHĨA CLB */
+    .manifesto-section {
+      background: linear-gradient(135deg, #ffffff 0%, #fff6f9 100%);
+      border-bottom: 1px solid var(--border);
+      position: relative;
+    }
+    .manifesto-card {
+      max-width: 960px;
+      margin: 0 auto;
+      background: #ffffff;
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: clamp(32px, 6vw, 60px);
+      box-shadow: 0 15px 40px rgba(232, 85, 132, 0.06);
+      text-align: center;
+      position: relative;
+    }
+    .quote-mark {
+      font-family: var(--font-heading);
+      font-size: 68px;
+      line-height: 1;
+      color: var(--secondary);
+      margin-bottom: -15px;
+    }
+    .manifesto-quote {
+      font-family: var(--font-heading);
+      font-size: clamp(24px, 3.4vw, 36px);
+      color: var(--primary);
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 24px;
+    }
+    .manifesto-quote span {
+      color: var(--accent);
+      font-style: italic;
+    }
+    .manifesto-text {
+      font-size: 16.5px;
+      line-height: 1.9;
+      color: var(--muted);
+      max-width: 780px;
+      margin: 0 auto 30px;
+    }
+    .manifesto-dual {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 32px;
+      text-align: left;
+    }
+    .dual-box {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 24px 26px;
+    }
+    .dual-box h4 {
+      font-size: 17px;
+      color: var(--primary);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .dual-box p {
+      font-size: 14.5px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    /* SHOW TIME / LỊCH BIỂU DIỄN */
+    .showtime-section {
+      background: #ffffff;
+      border-bottom: 1px solid var(--border);
+    }
+    .showtime-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .showtime-card {
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 34px 30px;
+      position: relative;
+      background: var(--surface);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.03);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .showtime-card.featured-show {
+      background: linear-gradient(135deg, #15284f 0%, #1e386e 100%);
+      color: #fff;
+      border-color: #27478a;
+    }
+    .showtime-tag {
+      display: inline-block;
+      padding: 5px 14px;
+      border-radius: 999px;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: 16px;
+      align-self: flex-start;
+    }
+    .tag-weekly { background: var(--accent); color: #fff; }
+    .tag-special { background: #ffd180; color: #4e3400; }
+    .showtime-card h3 {
+      font-family: var(--font-heading);
+      font-size: 25px;
+      margin-bottom: 12px;
+    }
+    .showtime-card.featured-show h3 { color: #fff; }
+    .showtime-info {
+      list-style: none;
+      margin: 18px 0 24px;
+    }
+    .showtime-info li {
+      padding: 7px 0;
+      font-size: 14.5px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .showtime-card.featured-show .showtime-info li { color: #e4dff0; }
+
+    /* Video Section */
+    .video-section {
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+    }
+    .video-container {
+      max-width: 920px;
+      margin: 0 auto;
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 24px;
+      box-shadow: 0 20px 45px rgba(21, 40, 79, 0.14);
+      border: 1px solid var(--border);
+      background: #111a30;
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    /* Portals (Registration & Participation Tracks) */
+    .portals-section { background: #ffffff; }
+    .portals-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .portal-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 26px;
+      padding: clamp(32px, 5vw, 46px);
+      position: relative;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.03);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .portal-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 40px rgba(232, 85, 132, 0.1);
+    }
+    .portal-card.highlight {
+      border: 2px solid var(--accent);
+      background: linear-gradient(180deg, #fffcfd 0%, #ffffff 100%);
+    }
+    .portal-badge {
+      position: absolute;
+      top: -14px;
+      right: 30px;
+      background: var(--accent);
+      color: #fff;
+      font-size: 11.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      padding: 5px 14px;
+      border-radius: 999px;
+      box-shadow: 0 4px 10px rgba(232, 85, 132, 0.3);
+    }
+    .portal-icon { font-size: 40px; margin-bottom: 20px; }
+    .portal-card h3 {
+      font-family: var(--font-heading);
+      font-size: 26px;
+      color: var(--primary);
+      margin-bottom: 12px;
+    }
+    .portal-card p {
+      color: var(--muted);
+      font-size: 15.5px;
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+    .portal-points { list-style: none; margin-bottom: 30px; }
+    .portal-points li {
+      padding: 9px 0;
+      font-size: 14.5px;
+      color: #383244;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      border-bottom: 1px dashed var(--border);
+    }
+    .portal-points li:before {
+      content: "✓";
+      color: var(--accent);
+      font-weight: bold;
+    }
+
+    /* Gallery Section */
+    .gallery-section { background: #f6edf2; }
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 18px;
+    }
+    .gallery-item {
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+      box-shadow: 0 10px 25px rgba(35, 20, 45, 0.08);
+      background: #e9e3e7;
+    }
+    .gallery-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .45s ease;
+    }
+    .gallery-item:hover img {
+      transform: scale(1.05);
+    }
+    .gallery-item .overlay-tag {
+      position: absolute;
+      bottom: 14px;
+      left: 14px;
+      right: 14px;
+      background: rgba(18, 32, 64, 0.85);
+      backdrop-filter: blur(8px);
+      color: #fff;
+      padding: 8px 14px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      pointer-events: none;
+    }
+    .g-featured { grid-column: span 8; height: 390px; }
+    .g-side { grid-column: span 4; height: 390px; }
+    .g-third { grid-column: span 4; height: 270px; }
+
+    /* Trust & CLB Strengths */
+    .trust-section { background: #ffffff; border-top: 1px solid var(--border); }
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+      margin-top: 20px;
+    }
+    .trust-box {
+      text-align: center;
+      padding: 30px 20px;
+      border-radius: 20px;
+      border: 1px solid var(--border);
+      background: #fffbfe;
+      transition: all .25s ease;
+    }
+    .trust-box:hover {
+      border-color: var(--secondary);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+    }
+    .trust-box .t-num {
+      font-family: var(--font-heading);
+      font-size: 34px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 6px;
+    }
+    .trust-box .t-title {
+      font-weight: 700;
+      font-size: 16px;
+      margin-bottom: 8px;
+      color: var(--accent);
+    }
+    .trust-box p {
+      font-size: 13.5px;
+      color: var(--muted);
+      line-height: 1.6;
+    }
+
+    /* Contact / CTA section */
+    .contact-section {
+      background: linear-gradient(135deg, #15284f 0%, #0d1a35 100%);
+      color: #fff;
+      text-align: center;
+    }
+    .contact-box {
+      max-width: 780px;
+      margin: 0 auto;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.16);
+      border-radius: 30px;
+      padding: clamp(36px, 6vw, 60px);
+      backdrop-filter: blur(14px);
+    }
+    .contact-box h2 { color: #ffffff; }
+    .contact-box p { color: #e2ddeb; font-size: 16.5px; margin-bottom: 34px; line-height: 1.8; }
+    .channel-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      max-width: 500px;
+      margin: 0 auto 28px;
+    }
+    .channel-btn {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 17px 26px;
+      border-radius: 16px;
+      font-weight: 700;
+      font-size: 16px;
+      transition: all .25s ease;
+    }
+    .fb-btn {
+      background: #1877f2;
+      color: #ffffff;
+      box-shadow: 0 4px 15px rgba(24,119,242,0.3);
+    }
+    .fb-btn:hover {
+      background: #1464cc;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(24,119,242,0.45);
+    }
+    .phone-btn {
+      background: #ffffff;
+      color: var(--primary);
+    }
+    .phone-btn:hover {
+      background: #f7f6f9;
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(255,255,255,0.25);
+    }
+    .contact-note {
+      font-size: 14px;
+      color: #f7cad9;
+      line-height: 1.7;
+    }
+
+    /* Footer */
+    footer {
+      padding: 38px clamp(20px, 8vw, 110px);
+      background: #0d1527;
+      color: #ded8e6;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+      font-size: 14px;
+    }
+    footer strong { color: #fff; letter-spacing: .06em; }
+
+    /* Responsive */
+    @media(max-width: 900px) {
+      .portals-grid, .showtime-grid, .manifesto-dual { grid-template-columns: 1fr; }
+      .trust-grid { grid-template-columns: repeat(2, 1fr); }
+      .g-featured, .g-side, .g-third { grid-column: span 12; height: 260px; }
+      nav { display: none; }
+      section { padding: 50px 20px; }
+    }
+    @media(max-width: 540px) {
+      .trust-grid { grid-template-columns: 1fr; }
+      .actions { flex-direction: column; }
+      .btn { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <a href="#" class="brand">
+      <svg class="brand-logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="44" height="44">
+        <defs>
+          <linearGradient id="navLogoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#e85584"/>
+            <stop offset="100%" stop-color="#15284f"/>
+          </linearGradient>
+        </defs>
+        <circle cx="50" cy="50" r="48" fill="#fff5f8" stroke="#f4b2c7" stroke-width="2"/>
+        <path d="M42 66 A 9 9 0 1 1 33 57 A 9 9 0 0 1 42 66 Z" fill="url(#navLogoGrad)"/>
+        <path d="M40 64 L40 26 C40 24 41 23 43 23 L65 20 C67 20 68 21 68 23 L68 56 A 9 9 0 1 1 59 47 A 9 9 0 0 1 68 56 Z" fill="url(#navLogoGrad)"/>
+        <polygon points="40,25 68,22 68,32 40,35" fill="url(#navLogoGrad)"/>
+      </svg>
+      <span>CẢM XÚC CLUB</span>
+    </a>
+    <nav>
+      <a href="#y-nghia">Ý nghĩa CLB</a>
+      <a href="#showtime">Lịch biểu diễn</a>
+      <a href="#recap-video">Video Đêm Nhạc</a>
+      <a href="#cong-dang-ky">Đăng ký tham gia</a>
+      <a href="#hinh-anh">Sân khấu bờ vịnh</a>
+      <a href="#lien-he">Liên hệ</a>
+    </nav>
+    <div class="header-actions">
+      <a href="#cong-dang-ky" class="btn-header secondary">Đăng ký Biểu diễn</a>
+      <a href="#cong-dang-ky" class="btn-header primary">Gia nhập CLB ↗</a>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="eyebrow">♫ CLB Âm Nhạc & Minishow Bờ Vịnh · TP. Hạ Long</div>
+        <h1>Chạm giai điệu.<br>Kết yêu thương.</h1>
+        <p class="hero-subtitle">Âm nhạc sinh ra không phải để phân định ai hát hay hơn, mà để nối dài những rung cảm chân thành. Tại Cảm Xúc Club, âm nhạc là chiếc cầu nối để những trái tim đồng điệu tìm thấy nhau giữa không gian lãng mạn bên bờ vịnh Hạ Long.</p>
+        
+        <div class="hero-features">
+          <div class="hero-feat-item">📍 <strong>Địa điểm:</strong> TP. Hạ Long (Sinh hoạt Offline)</div>
+          <div class="hero-feat-item">🗓️ <strong>Show Time:</strong> Tối Chủ Nhật hàng tuần</div>
+          <div class="hero-feat-item">✨ <strong>Special Show:</strong> Minishow chủ đề cập nhật Fanpage</div>
+        </div>
+
+        <div class="actions">
+          <a class="btn primary" href="#cong-dang-ky">Đăng ký Thành Viên Mới 💬</a>
+          <a class="btn secondary-btn" href="#cong-dang-ky">Đăng ký Biểu Diễn Giao Lưu 🎤</a>
+          <a class="btn ghost" href="#showtime">Xem Lịch Show Diễn ✦</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- MANIFESTO & Ý NGHĨA CLB -->
+    <section class="manifesto-section" id="y-nghia">
+      <div class="manifesto-card">
+        <div class="quote-mark">“</div>
+        <div class="section-kicker">Triết lý & Tuyên ngôn Cảm Xúc Club</div>
+        <h2 class="manifesto-quote">“Âm nhạc chỉ làm tôn thêm cảm xúc —<br><span>Chạm giai điệu, kết yêu thương.”</span></h2>
+        
+        <p class="manifesto-text">
+          Chúng mình tin rằng kỹ thuật có thể rèn luyện theo thời gian, nhưng cảm xúc chân thật trong từng câu hát mới là thứ chạm tới trái tim người nghe. Cảm Xúc Club mở rộng vòng tay cho bất cứ ai tìm kiếm một chốn dừng chân bình yên sau những bộn bề cuộc sống: dù bạn đến để <strong>thả hồn lắng nghe</strong> hay <strong>tự tin cất cao tiếng hát</strong>.
+        </p>
+
+        <div class="manifesto-dual">
+          <div class="dual-box">
+            <h4>🎧 Dành cho người muốn đến LẮNG NGHE</h4>
+            <p>Thưởng thức những đêm nhạc acoustic mộc mạc bên bờ biển, nhâm nhi ly đồ uống mát lành, đắm mình trong ánh đèn vàng lung linh và giải tỏa mọi áp lực giữa thiên nhiên biển trời Hạ Long.</p>
+          </div>
+          <div class="dual-box">
+            <h4>🎤 Dành cho người đam mê CA HÁT & NHẠC CỤ</h4>
+            <p>Bước ra khỏi vùng an toàn, đứng trên một sân khấu chỉn chu với âm thanh bài bản và band nhạc đệm trực tiếp. Không cần phải là ca sĩ chuyên nghiệp, chỉ cần bạn sẵn sàng hát bằng cả trái tim.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SHOW TIME / LỊCH BIỂU DIỄN & SPECIAL SHOW -->
+    <section class="showtime-section" id="showtime">
+      <div class="section-header">
+        <div class="section-kicker">Lịch Trình Minishow</div>
+        <h2>Show Time — Những Đêm Nhạc Bên Bờ Vịnh</h2>
+        <p class="intro">Hãy sắp xếp lịch hẹn cuối tuần để cùng bạn bè và người thương hòa mình vào những giai điệu acoustic ngọt ngào.</p>
+      </div>
+
+      <div class="showtime-grid">
+        <!-- ĐÊM NHẠC ĐỊNH KỲ -->
+        <div class="showtime-card featured-show">
+          <div>
+            <div class="showtime-tag tag-weekly">Show Định Kỳ Cuối Tuần</div>
+            <h3>Acoustic Night Bên Bờ Biển</h3>
+            <p style="color: #e4dff0; font-size: 15px;">Đêm nhạc acoustic thư giãn thường lệ dành cho tất cả khán giả và thành viên giao lưu tự do.</p>
+            <ul class="showtime-info">
+              <li>⏰ <strong>Thời gian:</strong> Tối Chủ Nhật hàng tuần (19:30 – 22:00)</li>
+              <li>📍 <strong>Không gian:</strong> Sân khấu ngoài trời view trọn vịnh Hạ Long</li>
+              <li>🎸 <strong>Hình thức:</strong> Band nhạc acoustic đệm sống, open mic giao lưu</li>
+            </ul>
+          </div>
+          <div>
+            <a class="btn primary" style="width: 100%;" href="https://web.facebook.com/Camxuc.club" target="_blank" rel="noopener noreferrer">
+              Nhắn Fanpage Đặt Chỗ Nghe Nhạc ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- SPECIAL SHOW -->
+        <div class="showtime-card">
+          <div>
+            <div class="showtime-tag tag-special">Đêm Nhạc Chủ Đề</div>
+            <h3>Special Show & Live Show Sự Kiện</h3>
+            <p style="color: var(--muted); font-size: 15px;">Các chương trình âm nhạc theo chủ đề đặc biệt (như Live Show 20/10 Dáng hình của Yêu thương, minishow ca sĩ khách mời, đêm nhạc lễ hội...).</p>
+            <ul class="showtime-info">
+              <li>📅 <strong>Thời gian:</strong> Tổ chức định kỳ theo từng tháng & dịp lễ</li>
+              <li>📢 <strong>Thông tin cập nhật:</strong> Đăng tải chi tiết lịch diễn, nghệ sĩ khách mời & sơ đồ chỗ ngồi trên Fanpage</li>
+              <li>🎫 <strong>Đăng ký:</strong> Đăng ký vé sớm trước mỗi đêm diễn</li>
+            </ul>
+          </div>
+          <div>
+            <a class="btn secondary-btn" style="width: 100%; border: 1px solid var(--primary);" href="https://web.facebook.com/Camxuc.club" target="_blank" rel="noopener noreferrer">
+              Theo Dõi Lịch Show Trên Fanpage ↗
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VIDEO RECAP SHOW SECTION -->
+    <section class="video-section" id="recap-video">
+      <div class="section-header">
+        <div class="section-kicker">Giai điệu thăng hoa</div>
+        <h2>Xem Lại Đêm Nhạc Gần Nhất (Show 20/10)</h2>
+        <p class="intro">
+          Mỗi đêm nhạc của Cảm Xúc Club là một hành trình cảm xúc trọn vẹn. Hãy cùng lắng nghe lại những bản ballad da diết, tiếng guitar mộc mạc và sự cổ vũ nhiệt thành của khán giả bên bờ vịnh Hạ Long.
+        </p>
+      </div>
+
+      <div class="video-container">
+        <!-- Chèn ID Video Youtube recap của bạn vào phần embed bên dưới -->
+        <iframe 
+          src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0" 
+          title="Recap Live Show Cảm Xúc Club Hạ Long" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+
+    <!-- PORTALS SECTION: CỔNG ĐĂNG KÝ (THÀNH VIÊN & BIỂU DIỄN) -->
+    <section class="portals-section" id="cong-dang-ky">
+      <div class="section-header">
+        <div class="section-kicker">Cánh cửa kết nối đam mê</div>
+        <h2>Tham Gia Cùng Cảm Xúc Club</h2>
+        <p class="intro">Dù bạn mong muốn trở thành thành viên nòng cốt gắn bó dài lâu hay muốn đăng ký biểu diễn giao lưu trong các đêm nhạc sắp tới, chúng mình luôn chào đón bạn!</p>
+      </div>
+
+      <div class="portals-grid">
+        <!-- CỔNG 1: TUYỂN THÀNH VIÊN MỚI -->
+        <div class="portal-card highlight">
+          <div class="portal-badge">Đang mở đợt tuyển</div>
+          <div>
+            <div class="portal-icon">🌟</div>
+            <h3>Tuyển Thành Viên Mới</h3>
+            <p>Dành cho các bạn trẻ (18–35 tuổi) tại TP. Hạ Long có niềm say mê ca hát, chơi nhạc cụ hoặc yêu thích công việc tổ chức sự kiện, truyền thông media.</p>
+            <ul class="portal-points">
+              <li>Luyện tập và sinh hoạt offline định kỳ hàng tuần.</li>
+              <li>Được rèn luyện giọng hát, phong thái sân khấu và ghép band.</li>
+              <li>Thử sức ở các ban: Biểu diễn, Nhạc công, Truyền thông & Sự kiện.</li>
+              <li>Hạn chót đợt tuyển này: <strong>30/11/2026</strong> (Casting liên tục).</li>
+            </ul>
+          </div>
+          <div>
+            <a class="btn primary" style="width: 100%;" href="https://web.facebook.com/Camxuc.club" target="_blank" rel="noopener noreferrer">
+              Ứng Tuyển Thành Viên (Nhắn Fanpage) ↗
+            </a>
+          </div>
+        </div>
+
+        <!-- CỔNG 2: ĐĂNG KÝ BIỂU DIỄN (GUEST / BAND) -->
+        <div class="portal-card">
+          <div>
+            <div class="portal-icon">🎸</div>
+            <h3>Đăng Ký Tham Gia Biểu Diễn</h3>
+            <p>Dành cho các ca sĩ tự do, band nhạc acoustic, nghệ sĩ nhạc cụ hoặc các bạn muốn đăng ký 1–2 tiết mục giao lưu trong đêm nhạc định kỳ của CLB.</p>
+            <ul class="portal-points">
+              <li>Sân khấu ngoài trời ngắm trọn vịnh Hạ Long lung linh ánh đèn.</li>
+              <li>Hỗ trợ dàn âm thanh, ánh sáng, micro và ban nhạc đệm chuyên nghiệp.</li>
+              <li>Giao lưu và kết nối với cộng đồng khán giả yêu âm nhạc Hạ Long.</li>
+              <li>Đăng ký trước bài hát và lịch ghép sân khấu cùng Ban Tổ Chức.</li>
+            </ul>
+          </div>
+          <div>
+            <a class="btn secondary-btn" style="width: 100%; border: 1px solid var(--primary);" href="https://web.facebook.com/Camxuc.club" target="_blank" rel="noopener noreferrer">
+              Đăng Ký Tiết Mục Biểu Diễn ↗
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALLERY SECTION: HÌNH ẢNH SÂN KHẤU THỰC TẾ -->
+    <section class="gallery-section" id="hinh-anh">
+      <div class="section-header">
+        <div class="section-kicker">Khoảnh khắc thực tế</div>
+        <h2>Không Gian Sân Khấu Bờ Biển Hạ Long</h2>
+        <p class="intro">Hình ảnh chân thực từ những minishow và đêm nhạc do Cảm Xúc Club tổ chức. Âm nhạc hòa cùng tiếng sóng biển tạo nên một không gian nghệ thuật khó quên.</p>
+      </div>
+
+      <div class="gallery-grid">
+        <div class="gallery-item g-featured">
+          <img src="dem-cam-xuc-ben-bien.jpg" onerror="this.onerror=null; this.src='images/dem-cam-xuc-ben-bien.jpg';" alt="Toàn cảnh sân khấu Cảm Xúc Club bên bờ biển Hạ Long lung linh ánh đèn">
+          <div class="overlay-tag">Sân khấu ngắm trọn vịnh biển Hạ Long</div>
+        </div>
+        <div class="gallery-item g-side">
+          <img src="ca-si-toa-sang.jpg" onerror="this.onerror=null; this.src='images/ca-si-toa-sang.jpg';" alt="Ca sĩ CLB biểu diễn trong vòng tay khán giả">
+          <div class="overlay-tag">Giao lưu & kết nối khán giả</div>
+        </div>
+        <div class="gallery-item g-third">
+          <img src="dem-hoi-cam-xuc-club.jpg" onerror="this.onerror=null; this.src='images/dem-hoi-cam-xuc-club.jpg';" alt="MC và ca sĩ nam thăng hoa dưới ánh đèn vòm">
+          <div class="overlay-tag">Đêm nhạc định kỳ</div>
+        </div>
+        <div class="gallery-item g-third">
+          <img src="dem-san-khau-cam-xuc.jpg" onerror="this.onerror=null; this.src='images/dem-san-khau-cam-xuc.jpg';" alt="Nữ ca sĩ biểu diễn Live Show Dáng hình của Yêu Thương">
+          <div class="overlay-tag">Live Show "Dáng hình của Yêu Thương"</div>
+        </div>
+        <div class="gallery-item g-third">
+          <img src="dem-hoi-cam-xuc-bien.jpg" onerror="this.onerror=null; this.src='images/dem-hoi-cam-xuc-bien.jpg';" alt="Góc nhìn toàn cảnh đêm nhạc đầm ấm">
+          <div class="overlay-tag">Không khí ấm áp & gắn kết</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TRUST & GIÁ TRỊ CỐT LÕI -->
+    <section class="trust-section" id="gioi-thieu">
+      <div class="section-header">
+        <div class="section-kicker">Tại sao chọn Cảm Xúc Club?</div>
+        <h2>Uy Tín & Chất Lượng Đêm Nhạc</h2>
+        <p class="intro">Chúng mình không chỉ tạo ra một sân chơi âm nhạc, mà còn xây dựng một không gian văn minh, chuyên nghiệp và đầy tính nhân văn.</p>
+      </div>
+
+      <div class="trust-grid">
+        <div class="trust-box">
+          <div class="t-num">100%</div>
+          <div class="t-title">Sân Khấu Thực Chiến</div>
+          <p>Mỗi thành viên đều có cơ hội đứng trên sân khấu biểu diễn trước hàng trăm khán giả.</p>
+        </div>
+        <div class="trust-box">
+          <div class="t-num">View Biển</div>
+          <div class="t-title">Vị Trí Độc Bản</div>
+          <p>Tọa lạc tại vị trí ngắm trọn vịnh Hạ Long, không gian lãng mạn hòa quyện cùng âm nhạc.</p>
+        </div>
+        <div class="trust-box">
+          <div class="t-num">Chuẩn Mực</div>
+          <div class="t-title">Âm Thanh & Ánh Sáng</div>
+          <p>Trang thiết bị chuyên nghiệp cùng band nhạc acoustic mộc mạc, tôn vinh giọng hát.</p>
+        </div>
+        <div class="trust-box">
+          <div class="t-num">Kết Nối</div>
+          <div class="t-title">Cộng Đồng Chân Thành</div>
+          <p>Nơi gặp gỡ những người bạn cùng tần số, chia sẻ đam mê và cùng nhau phát triển.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section class="contact-section" id="lien-he">
+      <div class="contact-box">
+        <div class="section-kicker" style="color: #f7c5d8;">Liên hệ & Đăng ký nhanh</div>
+        <h2>Bạn Đã Sẵn Sàng Hòa Cùng Giai Điệu?</h2>
+        <p>Đừng ngần ngại nhắn tin cho Ban Chủ Nhiệm Cảm Xúc Club qua Facebook hoặc liên hệ trực tiếp qua Hotline/Zalo để được hỗ trợ xếp lịch thử giọng, đăng ký tiết mục hoặc giữ chỗ cho đêm nhạc gần nhất.</p>
+        
+        <div class="channel-buttons">
+          <a class="channel-btn fb-btn" href="https://web.facebook.com/Camxuc.club" target="_blank" rel="noopener noreferrer">
+            <span>💬 Nhắn tin trực tiếp qua Fanpage Facebook</span>
+            <span>↗</span>
+          </a>
+          <a class="channel-btn phone-btn" href="tel:0942313406">
+            <span>📞 Hotline / Zalo: 0942 313 406</span>
+            <span>Gọi ngay</span>
+          </a>
+        </div>
+
+        <div class="contact-note">
+          📍 Địa điểm hoạt động: TP. Hạ Long, Quảng Ninh (Sinh hoạt Offline)<br>
+          ⏰ Đêm nhạc định kỳ: Tối <strong>Chủ Nhật hàng tuần</strong> · Special Show cập nhật trên Fanpage
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div>
+      <strong>CẢM XÚC CLUB — TP. HẠ LONG</strong>
+      <p style="margin-top: 4px; opacity: 0.85;">Chạm giai điệu · Kết yêu thương · Âm nhạc bên bờ vịnh di sản</p>
+    </div>
+    <div style="text-align: right;">
+      <p>Fanpage: <a href="https://web.facebook.com/Camxuc.club" target="_blank" style="text-decoration: underline;">fb.com/Camxuc.club</a></p>
+      <p>Hotline hỗ trợ: <strong>0942 313 406</strong></p>
+    </div>
+  </footer>
+
+</body>
+</html>
